@@ -18,7 +18,7 @@ import { HousingLocation } from '../housinglocation';
   <section class="results">
     <app-housing-location *ngFor="let housingLocation of housingLocationList"
     [housingLocation]="housingLocation"></app-housing-location> 
-  </section>
+  </section> 
 `, // why [] = "", name references housing-location
   styleUrls: ['./home.component.css']
 })
