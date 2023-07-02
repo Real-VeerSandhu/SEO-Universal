@@ -90,7 +90,7 @@ export class HomeComponent {
       city: 'Oakland',
       state: 'CA',
       photo: '/assets/phil-hearing-IYfp2Ixe9nM-unsplash.jpg',
-      availableUnits: 5,
+      availableUnits: 5, 
       wifi: true,
       laundry: true
     },
