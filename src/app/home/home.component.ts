@@ -24,12 +24,10 @@ import { HousingService } from '../housing.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
+  housingLocationList: HousingLocation[] = []; // set empty array
+  housingService: HousingService = inject(HousingService); // inject data
 
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
+    this.housingLocationList = this.housingService.getAllHousingLocations(); // assign data to correct value
   } 
 }
-
-
