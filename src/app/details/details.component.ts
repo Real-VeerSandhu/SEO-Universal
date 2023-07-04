@@ -55,9 +55,11 @@ export class DetailsComponent {
   });
 
   constructor() {
-    const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
-  } // allows DetailsCompount to access the ActivatedRoute feature which enable it to access data about the current route
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
+  }// allows DetailsCompount to access the ActivatedRoute feature which enable it to access data about the current route
 
   submitApplication() {
     this.housingService.submitApplication(
