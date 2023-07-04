@@ -28,6 +28,6 @@ export class HomeComponent {
   housingService: HousingService = inject(HousingService); // inject data
 
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations(); // assign data to correct value
+    this.housingLocationList = this.housingService.getAllHousingLocations(); // assign data to correct values
   } 
 }
