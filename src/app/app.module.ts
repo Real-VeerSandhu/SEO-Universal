@@ -17,7 +17,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
+import { provideClientHydration } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -41,6 +41,7 @@ import { isPlatformBrowser } from '@angular/common';
     MessagesComponent,
     HeroSearchComponent
   ],
+  providers: [ provideClientHydration() ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
